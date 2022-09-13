@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    max-width: 1900px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+    border: #F5F5F5;
+    border-width: 4px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+}
+
+header h1 {
+    width: 80%;
+    display: flex;
+    padding-left: 15px;
+    align-content: center;
+    justify-content: flex-start;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333333;
+
+}
+
+.itens ul {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #828282;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vitrine {
+    max-width: 800px;
+
+}
+
+.card {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.card li {
+    width: 207px;
+    height: 380px;
+    margin: 15px;
+    text-align: start;
+    padding-left: 10px;
+    padding-top: 5px;
+    border: solid #F5F5F5 2px;
+    background-color: #F5F5F5;
+}
+
+.card li:hover {
+    border-color: #37268C;
+}
+
+.card li img {
+    width: 200px;
+    height: 130px;
+    object-fit: fill;
+}
+
+.card li h4 {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    color: #FFFFFF;
+    background-color: #37268C;
+}
+
+.card li h3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.descricao {
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.preco {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+    color: #37268C;
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+}
+
+.botao {
+    display: flex;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #F5F5F5;
+}
+
+.botao:hover {
+    color: #37268C;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    width: 600px;
+    height: 300px;
+    margin: 15px;
+    text-align: start;
+    padding-left: 1px;
+    border: none;
+
+}
+
+.barra {
+    height: 0px;
+}
+
+.barra input {
+    height: 50px;
+    width: 225px;
+    gap: 10px;
+    background-color: #F5F5F5;
+    font-size: 16px;
+    border: none;
+
+
+
+}
+
+.barra button {
+    height: 50px;
+    width: 125px;
+    font-size: 16px;
+    border: none;
+    color: #F5F5F5;
+    background-color: #37268C;
+}
+
+.barra button:hover {
+    color: #37268C;
+    background-color: #F5F5F5;
+}
+
+.carrinho {
+    margin-top: 80px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.carrinho h3 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 50px;
+    width: 350px;
+    color: #F5F5F5;
+    background-color: #37268C;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart {
+    height: 628px;
+    width: 350px
+}
