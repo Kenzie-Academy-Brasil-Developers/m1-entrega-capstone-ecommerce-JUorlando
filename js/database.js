@@ -46,7 +46,7 @@ const data = [
     img: "./img/Vans.jpg",
     nameItem: "Vans OldSkool",
     description:
-      "Em 1977, o tênis Old Skool, originalmente nomeado de Vans #36...",
+      "Em 1977, o tênis Old Skool, originalmente nomeado de Vans...",
     value: 369,
     addCart: "Adicionar ao carrinho",
     tag: ["Diversos"],
