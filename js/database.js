@@ -3,7 +3,7 @@
 const data = [
   {
     id: 1,
-    img: "./img/Nike.png",
+    img: "./img/img.png",
     nameItem: "Air Jordan 1",
     description:
       "O Air Jordan 1 tem alta relevância no meio sneakerhead...",
