@@ -3,7 +3,7 @@
 const data = [
   {
     id: 1,
-    img: "./img/img.png",
+    img: "./img/Nike.png",
     nameItem: "Air Jordan 1",
     description:
       "O Air Jordan 1 tem alta relevância no meio sneakerhead...",
@@ -13,7 +13,7 @@ const data = [
   },
   {
     id: 2,
-    img: "/img/Jordan 4.jpg",
+    img: "./img/Jordan 4.jpg",
     nameItem: "Air Jordan 4",
     description:
       "Um dos modelos mais cobiçados ganha um toque vintage...",
@@ -53,7 +53,7 @@ const data = [
   },
   {
     id: 6,
-    img: "./img/Converse.png",
+    img: "./img/converse.png",
     nameItem: "Converse",
     description:
       "Estiloso na medida certa para fazer a diferença no seu dia a dia!...",
