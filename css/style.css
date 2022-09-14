@@ -44,6 +44,11 @@ header h1 {
     color: #828282;
 }
 
+.itens ul li:hover{
+    color: black;
+    cursor: pointer;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -76,7 +81,7 @@ header h1 {
 }
 
 .card li:hover {
-    border-color: #37268C;
+    border-color: black;
 }
 
 .card li img {
@@ -92,7 +97,7 @@ header h1 {
     justify-content: center;
     width: 30%;
     color: #FFFFFF;
-    background-color: #37268C;
+    background-color: black;
 }
 
 .card li h3 {
@@ -106,13 +111,14 @@ header h1 {
 .descricao {
     font-size: 14px;
     padding-left: 10px;
+    color: #333333;
 }
 
 .preco {
     font-size: 16px;
     font-weight: bold;
     padding-left: 10px;
-    color: #37268C;
+    color: black;
 }
 
 .card-button {
@@ -122,15 +128,22 @@ header h1 {
 }
 
 .botao {
+    width: 200px;
+    height: 30px;
     display: flex;
-    border: none;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
     font-weight: bold;
-    background-color: #F5F5F5;
+    color: #F5F5F5;
+    border-color: black;
+    border-radius: 10px;
+    background-color: black;
 }
 
 .botao:hover {
-    color: #37268C;
+    color: black;
+    background-color: #F5F5F5;
 }
 
 .box {
@@ -158,9 +171,6 @@ header h1 {
     background-color: #F5F5F5;
     font-size: 16px;
     border: none;
-
-
-
 }
 
 .barra button {
@@ -169,11 +179,11 @@ header h1 {
     font-size: 16px;
     border: none;
     color: #F5F5F5;
-    background-color: #37268C;
+    background-color: black;
 }
 
 .barra button:hover {
-    color: #37268C;
+    color: black;
     background-color: #F5F5F5;
 }
 
@@ -187,7 +197,7 @@ header h1 {
 
 }
 
-.carrinho h3 {
+.titulo {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -195,12 +205,114 @@ header h1 {
     height: 50px;
     width: 350px;
     color: #F5F5F5;
-    background-color: #37268C;
+    background-color: black;
     font-size: 20px;
     font-weight: bold;
 }
 
+.emptyCar {
+    display: none;
+}
+
 .cart {
-    height: 628px;
-    width: 350px
+    width: 350px;
+    max-height: 300px;
+    overflow: auto;
+    background-color: #F5F5F5;
+}
+
+.cart ul {
+    list-style: none;
+}
+
+.cart ul li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 150px;
+    text-align: start;
+    border: solid #F5F5F5 2px;
+    border-radius: 10px;
+}
+
+.cart ul li:hover{
+    border-color: black;
+}
+
+.cart ul li img {
+    width: 150px;
+    max-height: 60px;
+    object-fit: fill;
+    border-top-left-radius: 10px;
+}
+
+.box-mini{
+    height: 50px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+}
+
+.nome2 {
+    width: 200px;
+    height: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 5px;
+    
+}
+
+.p1 {
+    width: 200px;
+    height: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.b1 {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #F5F5F5;
+    border-color: black;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.b1:hover {
+    color: black;
+    background-color: #F5F5F5;
+}
+
+.calculo {
+    height: 100px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #333333;
+
+}
+
+.quantidade {
+    color: #F5F5F5;
+    font-size: 16px;
+    padding-left: 10px;
+
+}
+
+.valor {
+    color: #F5F5F5;
+    font-size: 16px;
+    padding-left: 10px;
 }

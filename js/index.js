@@ -75,29 +75,42 @@ function templateCards2(){
 
     let tagSection2 = document.createElement("section")
     let tagBarra = document.createElement("div")
-    let tagForm = document.createElement("form")
     let tagInput = document.createElement("input")
     let tagBotao2 = document.createElement("button")
     let tagCar = document.createElement("div")
     let tagCarName = document.createElement("h3")
     let tagCarrinho = document.createElement("div")
-    let tagConteudo = document.createElement("ul")
+    let ulCart = document.createElement("ul")
+    let msg = document.createElement("img")
+    let tagCalculo = document.createElement("div")
+    let tagQuantidade = document.createElement("p")
+    let tagValor = document.createElement("p")
 
     tagSection2.classList.add("box")
     tagBarra.classList.add("barra")
     tagCar.classList.add("carrinho")
-    tagConteudo.classList.add("cart")
+    tagCarrinho.classList.add("cart")
+    tagCarName.classList.add("titulo")
+    tagCalculo.classList.add("calculo")
+    tagQuantidade.classList.add("quantidade")
+    tagValor.classList.add("valor")
 
+    msg.id = "emptyCart"
+
+    msg.src = "./img/cesta (2) (2).jpg"
+    msg.alt = "imagem de carrinho de compras vazio."
     tagInput.type = "text"
     tagInput.placeholder = "Digite aqui sua pesquisa"
     tagBotao2.innerText = "Pesquisa"
     tagCarName.innerText = "Carrinho de compras"
-
+    msg.innerText = "Carrinho Vazio"
+  
     tagSection2.appendChild(tagBarra)
-    tagBarra.append(tagForm, tagInput, tagBotao2)
+    tagBarra.append(tagInput, tagBotao2)
     tagSection2.appendChild(tagCar)
-    tagCar.append(tagCarName, tagCarrinho)
-    tagCarrinho.appendChild(tagConteudo)
+    tagCarrinho.appendChild(ulCart)
+    tagCar.append(tagCarName, msg, tagCarrinho, tagCalculo)
+    tagCalculo.append(tagQuantidade, tagValor)
 
     return tagSection2
 
@@ -105,21 +118,35 @@ function templateCards2(){
 
 const botoes = document.getElementsByClassName("botao")
 
+let valorTotal = 0
+let contador = 0
+
 for(let i = 0; i < botoes.length; i++){
 
+    
     let button = botoes[i]
 
     button.addEventListener("click", function(event){
 
+        document.querySelector("#emptyCart").classList.add("emptyCar")
         let elemento = event.target
         let elementoId = elemento.id
-
-        let produto = procuraObjeto(elementoId)
         
+        let produto = procuraObjeto(elementoId)
+
+        contador ++
+        document.querySelector(".quantidade").innerHTML = `Quantidade: ${contador}`
+
+        valorTotal+= produto.value
+        document.querySelector(".valor").innerHTML = `Valor do Carrinho: R$${valorTotal},00`
+
         if(!produto){
             alert("Produto não encontrado!")
         } else {
-            insereCarrinho(produto)
+
+            let li =  insereCarrinho(produto)
+            let carrinhoCompras = document.querySelector(".cart ul")
+            carrinhoCompras.appendChild(li)  
         }
     })
 }
@@ -143,7 +170,45 @@ function procuraObjeto(elementoId){
 
 function insereCarrinho(produto){
 
-    let carrinho = document.getElementsByClassName(".cart")
-    console.log(produto, carrinho)
+    let li = document.createElement("li")
+    let img = document.createElement("img")
+    let boxMini = document.createElement("div")
+    let nome = document.createElement("h3")
+    let preco = document.createElement("p")
+    let botao = document.createElement("button")
 
+    boxMini.classList.add("box-mini")
+    nome.classList.add("nome2")
+    preco.classList.add("p1")
+    botao.classList.add("b1")
+
+    img.src = produto.img
+    img.alt = produto.description
+    nome.innerText = `Produto: ${produto.nameItem}`
+    preco.innerText = `Preço: R$ ${produto.value},00`
+    botao.innerHTML = "Remover"
+
+    botao.addEventListener("click", function(event){
+        
+        let li = event.path[1]
+        li.remove()
+
+        contador--
+        document.querySelector(".quantidade").innerHTML = `Quantidade: ${contador}`
+
+        valorTotal -= produto.value
+        document.querySelector(".valor").innerHTML = `Valor do Carrinho: R$${valorTotal},00`
+
+        let cart = document.querySelector(".cart ul")
+        
+        if(cart.innerText == ""){
+            document.querySelector("#emptyCart").classList.remove("emptyCar")
+        }
+       
+    })
+
+    li.append(img, boxMini, botao)
+    boxMini.append(nome, preco)
+    
+    return li
 }

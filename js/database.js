@@ -3,11 +3,11 @@
 const data = [
   {
     id: 1,
-    img: "../img/Nike.jpg",
+    img: "../img/Nike.png",
     nameItem: "Air Jordan 1",
     description:
       "O Air Jordan 1 tem alta relevância no meio sneakerhead...",
-    value: 1.199,
+    value: 1199,
     addCart: "Adicionar ao carrinho",
     tag: ["Nike"],
   },
@@ -17,7 +17,7 @@ const data = [
     nameItem: "Air Jordan 4",
     description:
       "Um dos modelos mais cobiçados ganha um toque vintage...",
-    value: 1.999,
+    value: 1999,
     addCart: "Adicionar ao carrinho",
     tag: ["Nike"],
   },
@@ -54,7 +54,7 @@ const data = [
   {
     id: 6,
     img: "../img/Converse.png",
-    nameItem: "Converse Chuck 70",
+    nameItem: "Converse",
     description:
       "Estiloso na medida certa para fazer a diferença no seu dia a dia!...",
     value: 420,
