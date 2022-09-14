@@ -44,7 +44,7 @@ header h1 {
     color: #828282;
 }
 
-.itens ul li:hover{
+.itens ul li:hover {
     color: black;
     cursor: pointer;
 }
@@ -236,7 +236,7 @@ header h1 {
     border-radius: 10px;
 }
 
-.cart ul li:hover{
+.cart ul li:hover {
     border-color: black;
 }
 
@@ -247,7 +247,7 @@ header h1 {
     border-top-left-radius: 10px;
 }
 
-.box-mini{
+.box-mini {
     height: 50px;
     width: 150px;
     display: flex;
@@ -262,7 +262,7 @@ header h1 {
     font-weight: bold;
     font-size: 14px;
     padding-left: 5px;
-    
+
 }
 
 .p1 {

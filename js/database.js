@@ -3,7 +3,7 @@
 const data = [
   {
     id: 1,
-    img: "../img/Nike.png",
+    img: "./img/Nike.png",
     nameItem: "Air Jordan 1",
     description:
       "O Air Jordan 1 tem alta relevância no meio sneakerhead...",
@@ -13,7 +13,7 @@ const data = [
   },
   {
     id: 2,
-    img: "../img/Jordan 4.jpg",
+    img: "/img/Jordan 4.jpg",
     nameItem: "Air Jordan 4",
     description:
       "Um dos modelos mais cobiçados ganha um toque vintage...",
@@ -23,7 +23,7 @@ const data = [
   },
   {
     id: 3,
-    img: "../img/Air Force.jpg",
+    img: "./img/Air Force.jpg",
     nameItem: "Air Force 1",
     description:
       "O sneaker Nike Air Force 1 white/white possui uma colorway básica e clássica...",
@@ -33,7 +33,7 @@ const data = [
   },
   {
     id: 4,
-    img: "../img/Adidas.jpg",
+    img: "./img/Adidas.jpg",
     nameItem: "Adidas Superstar",
     description:
       "O tênis Superstar branco leva ainda mais estilo ao seu dia a dia!...",
@@ -43,7 +43,7 @@ const data = [
   },
   {
     id: 5,
-    img: "../img/Vans.jpg",
+    img: "./img/Vans.jpg",
     nameItem: "Vans OldSkool",
     description:
       "Em 1977, o tênis Old Skool, originalmente nomeado de Vans #36...",
@@ -53,7 +53,7 @@ const data = [
   },
   {
     id: 6,
-    img: "../img/Converse.png",
+    img: "./img/Converse.png",
     nameItem: "Converse",
     description:
       "Estiloso na medida certa para fazer a diferença no seu dia a dia!...",
