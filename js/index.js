@@ -8,9 +8,9 @@ tagUl.classList.add("card")
 mercadoria.appendChild(tagSection)
 tagSection.appendChild(tagUl)
 
-function criandoTemplate(lista, referenciaHtml){
+function criandoTemplate(lista, referenciaHtml) {
 
-    for(let i = 0; i < lista.length; i++){
+    for (let i = 0; i < lista.length; i++) {
 
         let itenAtual = lista[i]
 
@@ -22,7 +22,7 @@ function criandoTemplate(lista, referenciaHtml){
 
 criandoTemplate(data, tagUl)
 
-function templateCards(itens){
+function templateCards(itens) {
 
     let img = itens.img
     let tipo = itens.tag
@@ -31,7 +31,7 @@ function templateCards(itens){
     let valor = itens.value
     let carrinho = itens.addCart
     let id = itens.id
-    
+
     let tagLi = document.createElement("li")
     let tagImg = document.createElement("img")
     let tagTipo = document.createElement("h4")
@@ -60,18 +60,18 @@ function templateCards(itens){
 
 }
 
-function criandoTemplate2(referenciaHtml){
+function criandoTemplate2(referenciaHtml) {
 
 
-        let template = templateCards2()
+    let template = templateCards2()
 
-        referenciaHtml.appendChild(template)
+    referenciaHtml.appendChild(template)
 
 }
 
 criandoTemplate2(mercadoria)
 
-function templateCards2(){
+function templateCards2() {
 
     let tagSection2 = document.createElement("section")
     let tagBarra = document.createElement("div")
@@ -104,7 +104,7 @@ function templateCards2(){
     tagBotao2.innerText = "Pesquisa"
     tagCarName.innerText = "Carrinho de compras"
     msg.innerText = "Carrinho Vazio"
-  
+
     tagSection2.appendChild(tagBarra)
     tagBarra.append(tagInput, tagBotao2)
     tagSection2.appendChild(tagCar)
@@ -121,44 +121,44 @@ const botoes = document.getElementsByClassName("botao")
 let valorTotal = 0
 let contador = 0
 
-for(let i = 0; i < botoes.length; i++){
+for (let i = 0; i < botoes.length; i++) {
 
-    
+
     let button = botoes[i]
 
-    button.addEventListener("click", function(event){
+    button.addEventListener("click", function (event) {
 
         document.querySelector("#emptyCart").classList.add("emptyCar")
         let elemento = event.target
         let elementoId = elemento.id
-        
+
         let produto = procuraObjeto(elementoId)
 
-        contador ++
+        contador++
         document.querySelector(".quantidade").innerHTML = `Quantidade: ${contador}`
 
-        valorTotal+= produto.value
+        valorTotal += produto.value
         document.querySelector(".valor").innerHTML = `Valor do Carrinho: R$${valorTotal},00`
 
-        if(!produto){
+        if (!produto) {
             alert("Produto não encontrado!")
         } else {
 
-            let li =  insereCarrinho(produto)
+            let li = insereCarrinho(produto)
             let carrinhoCompras = document.querySelector(".cart ul")
-            carrinhoCompras.appendChild(li)  
+            carrinhoCompras.appendChild(li)
         }
     })
 }
 
-function procuraObjeto(elementoId){
+function procuraObjeto(elementoId) {
 
 
-    for(let j = 0; j < data.length;j++){
+    for (let j = 0; j < data.length; j++) {
 
         let produto = data[j]
 
-        if(produto.id == elementoId){
+        if (produto.id == elementoId) {
 
             return produto
 
@@ -168,7 +168,7 @@ function procuraObjeto(elementoId){
     return false
 }
 
-function insereCarrinho(produto){
+function insereCarrinho(produto) {
 
     let li = document.createElement("li")
     let img = document.createElement("img")
@@ -188,8 +188,8 @@ function insereCarrinho(produto){
     preco.innerText = `Preço: R$ ${produto.value},00`
     botao.innerHTML = "Remover"
 
-    botao.addEventListener("click", function(event){
-        
+    botao.addEventListener("click", function (event) {
+
         let li = event.path[1]
         li.remove()
 
@@ -200,15 +200,15 @@ function insereCarrinho(produto){
         document.querySelector(".valor").innerHTML = `Valor do Carrinho: R$${valorTotal},00`
 
         let cart = document.querySelector(".cart ul")
-        
-        if(cart.innerText == ""){
+
+        if (cart.innerText == "") {
             document.querySelector("#emptyCart").classList.remove("emptyCar")
         }
-       
+
     })
 
     li.append(img, boxMini, botao)
     boxMini.append(nome, preco)
-    
+
     return li
 }
